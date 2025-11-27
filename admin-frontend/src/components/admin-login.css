@@ -55,7 +55,7 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #3b82f6;
 }
 
 .form-group input:disabled {
@@ -81,13 +81,14 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #3b82f6;
   color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
+  background-color: #2563eb;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
 .btn-primary:disabled {
@@ -96,12 +97,12 @@
 }
 
 .btn-secondary {
-  background-color: #333;
+  background-color: #6b7280;
   color: white;
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background-color: #444;
+  background-color: #4b5563;
 }
 
 .btn-secondary:disabled {
@@ -111,7 +112,7 @@
 
 .error-message {
   background-color: rgba(244, 67, 54, 0.1);
-  border: 1px solid #f44336;
+  border: 1px solid #ef4444;
   color: #ff6b6b;
   padding: 0.75rem;
   border-radius: 6px;
