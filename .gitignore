@@ -1,0 +1,43 @@
+# Backend (Go)
+backend/chat-app-backend
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# Frontends (Node/React)
+frontend/node_modules
+frontend/dist
+frontend/.env*
+
+guest-frontend/node_modules
+guest-frontend/dist
+guest-frontend/.env*
+
+admin-frontend/node_modules
+admin-frontend/dist
+admin-frontend/.env*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+vendor/

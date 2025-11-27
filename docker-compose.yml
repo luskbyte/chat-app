@@ -1,0 +1,50 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - JWT_SECRET=your-secret-key-change-in-production
+    networks:
+      - chat-network
+    restart: unless-stopped
+
+  guest-frontend:
+    build:
+      context: ./guest-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - chat-network
+    restart: unless-stopped
+    environment:
+      - VITE_API_URL=http://localhost:8080/api
+
+  admin-frontend:
+    build:
+      context: ./admin-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:80"
+    depends_on:
+      - backend
+    networks:
+      - admin-network
+      - chat-network
+    restart: unless-stopped
+    environment:
+      - VITE_API_URL=http://localhost:8080/api
+
+networks:
+  chat-network:
+    driver: bridge
+  admin-network:
+    driver: bridge
+    internal: false  # Pode restringir para internal: true em produção
+
