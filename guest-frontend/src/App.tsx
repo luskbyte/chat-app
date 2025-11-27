@@ -33,23 +33,11 @@ function App() {
 
   if (!isLoggedIn) {
     return (
-      <>
-        <Login 
-          onLogin={handleGuestLogin}
-          onBack={() => {}}
-          error={error}
-        />
-        <div className="admin-link-container">
-          <a 
-            href="http://localhost:3001" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="admin-link-button"
-          >
-            🔑 Acesso Administrativo
-          </a>
-        </div>
-      </>
+      <Login 
+        onLogin={handleGuestLogin}
+        onBack={() => {}}
+        error={error}
+      />
     );
   }
 
